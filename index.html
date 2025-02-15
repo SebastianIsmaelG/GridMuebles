@@ -10,28 +10,93 @@
     />
     <title>Casa</title>
     <style>
+      :root{
+        --color-fondo-mesa: burlywood;
+        --color-fondo-mueble-tv: blue;
+        --color-fondo-bici: orange;
+        --color-fondo-sillon: blueviolet;
+        --color-fondo-parlantes: chartreuse;
+        --color-fondo-estufa: darkgreen;
+        --color-fondo-tendedero: aqua;
+
+      }
       .col-1-10 {
+        margin: 0;
         flex: 0 0 10%;
         max-width: 10%;
-        border: solid rgb(114, 30, 30) 2px;
+        border: solid rgb(221, 63, 63) 1px;
+        height: 130px;
+        width: 130px;
       }
       .mesa {
-        background-color: rgb(165, 99, 18);
+        background-color: var(--color-fondo-mesa);
       }
       .mueble_tv{
-        background-color: rgb(21, 83, 175);
+        background-color: var(--color-fondo-mueble-tv);
       }
       .bici{
-        background-color: yellow;
+        background-color: var(--color-fondo-bici);
       }
       .sillon{
-        background-color: blueviolet;
+        background-color: var(--color-fondo-sillon);
       }
       .tendedero{
-        background-color: aqua;
+        background-color: var(--color-fondo-tendedero);
       }
       .parlantes{
-        background-color: chartreuse;
+        background-color: var(--color-fondo-parlantes);
+      }
+      .estufa {
+        background-color: var(--color-fondo-estufa);
+      }
+      .circle-mesa {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-fondo-mesa);
+        border-radius: 50%; 
+        display: inline-block; 
+      }
+      .circle-mueble-tv {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-fondo-mueble-tv);
+        border-radius: 50%; 
+        display: inline-block; 
+      }
+      .circle-bici {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-fondo-bici);
+        border-radius: 50%; 
+        display: inline-block; 
+      }
+      .circle-sillon {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-fondo-sillon);
+        border-radius: 50%; 
+        display: inline-block; 
+      }
+      .circle-tendedero {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-fondo-tendedero);
+        border-radius: 50%; 
+        display: inline-block; 
+      }
+      .circle-parlantes {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-fondo-parlantes);
+        border-radius: 50%; 
+        display: inline-block; 
+      }
+      .circle-estufa {
+        width: 10px;
+        height: 10px;
+        background-color: var(--color-fondo-estufa);
+        border-radius: 50%; 
+        display: inline-block; 
       }
     </style>
   </head>
@@ -46,37 +111,37 @@
                     <th>Largo</th>
                 </tr>
                 <tr>
-                    <td>Mesa</td>
+                    <td>Mesa <div class="circle-mesa"></div></td>
                     <td>4</td>
                     <td>6</td>
                 </tr>
                 <tr>
-                    <td>Sillon</td>
+                    <td>Sillon <div class="circle-sillon"></div></td>
                     <td>3</td>
                     <td>6</td>
                 </tr>
                 <tr>
-                    <td>Mueble TV</td>
+                    <td>Mueble TV <div class="circle-mueble-tv"></div></td>
                     <td>1</td>
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td>Parlantes</td>
+                    <td>Parlantes <div class="circle-parlantes"></div></td>
                     <td>1</td>
                     <td>2</td>
                 </tr>
                 <tr>
-                    <td>Bicicletas</td>
+                    <td>Bicicletas <div class="circle-bici"></div></td>
                     <td>2</td>
                     <td>5</td>
                 </tr>
                 <tr>
-                    <td>Estufa</td>
+                    <td>Estufa <div class="circle-estufa"></div></td>
                     <td>2</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Tendedero</td>
+                    <td>Tendedero <div class="circle-tendedero"></div></td>
                     <td>2</td>
                     <td>3</td>
                 </tr>
@@ -85,148 +150,148 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2 mesa">5</div>
-        <div class="col-1-10 py-2 mesa">6</div>
-        <div class="col-1-10 py-2 mesa">7</div>
-        <div class="col-1-10 py-2 mesa">8</div>
-        <div class="col-1-10 py-2 mesa">9</div>
-        <div class="col-1-10 py-2 mesa">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2 mesa">5</div>
-        <div class="col-1-10 py-2 mesa">6</div>
-        <div class="col-1-10 py-2 mesa">7</div>
-        <div class="col-1-10 py-2 mesa">8</div>
-        <div class="col-1-10 py-2 mesa">9</div>
-        <div class="col-1-10 py-2 mesa">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2 mesa">5</div>
-        <div class="col-1-10 py-2 mesa">6</div>
-        <div class="col-1-10 py-2 mesa">7</div>
-        <div class="col-1-10 py-2 mesa">8</div>
-        <div class="col-1-10 py-2 mesa">9</div>
-        <div class="col-1-10 py-2 mesa">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2 mesa">5</div>
-        <div class="col-1-10 py-2 mesa">6</div>
-        <div class="col-1-10 py-2 mesa">7</div>
-        <div class="col-1-10 py-2 mesa">8</div>
-        <div class="col-1-10 py-2 mesa">9</div>
-        <div class="col-1-10 py-2 mesa">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2">7</div>
-        <div class="col-1-10 py-2">8</div>
-        <div class="col-1-10 py-2">9</div>
-        <div class="col-1-10 py-2">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2">7</div>
-        <div class="col-1-10 py-2">8</div>
-        <div class="col-1-10 py-2">9</div>
-        <div class="col-1-10 py-2">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2">7</div>
-        <div class="col-1-10 py-2">8</div>
-        <div class="col-1-10 py-2 bici">9</div>
-        <div class="col-1-10 py-2 bici">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2">7</div>
-        <div class="col-1-10 py-2">8</div>
-        <div class="col-1-10 py-2 sillon">9</div>
-        <div class="col-1-10 py-2 sillon">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2">7</div>
-        <div class="col-1-10 py-2">8</div>
-        <div class="col-1-10 py-2">9</div>
-        <div class="col-1-10 py-2">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2">7</div>
-        <div class="col-1-10 py-2">8</div>
-        <div class="col-1-10 py-2">9</div>
-        <div class="col-1-10 py-2">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2">7</div>
-        <div class="col-1-10 py-2">8</div>
-        <div class="col-1-10 py-2">9</div>
-        <div class="col-1-10 py-2">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2">1</div>
-        <div class="col-1-10 py-2">2</div>
-        <div class="col-1-10 py-2">3</div>
-        <div class="col-1-10 py-2">4</div>
-        <div class="col-1-10 py-2">5</div>
-        <div class="col-1-10 py-2">6</div>
-        <div class="col-1-10 py-2 mueble_tv">7</div>
-        <div class="col-1-10 py-2 mueble_tv">8</div>
-        <div class="col-1-10 py-2 mueble_tv">9</div>
-        <div class="col-1-10 py-2 mueble_tv">10</div>
+        <div class="col-1-10 py-2 px-2">1</div>
+        <div class="col-1-10 py-2 px-2">2</div>
+        <div class="col-1-10 py-2 px-2">3</div>
+        <div class="col-1-10 py-2 px-2">4</div>
+        <div class="col-1-10 py-2 px-2">5</div>
+        <div class="col-1-10 py-2 px-2">6</div>
+        <div class="col-1-10 py-2 px-2">7</div>
+        <div class="col-1-10 py-2 px-2">8</div>
+        <div class="col-1-10 py-2 px-2">9</div>
+        <div class="col-1-10 py-2 px-2">10</div>
       </div>
     </div>
 
