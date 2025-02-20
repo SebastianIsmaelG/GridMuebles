@@ -10,7 +10,7 @@
     />
     <title>Casa</title>
     <style>
-      :root{
+      :root {
         --color-fondo-mesa: burlywood;
         --color-fondo-mueble-tv: blue;
         --color-fondo-bici: orange;
@@ -18,7 +18,6 @@
         --color-fondo-parlantes: chartreuse;
         --color-fondo-estufa: darkgreen;
         --color-fondo-tendedero: aqua;
-
       }
       .col-1-10 {
         margin: 0;
@@ -28,75 +27,22 @@
         height: 130px;
         width: 130px;
       }
-      .mesa {
-        background-color: var(--color-fondo-mesa);
+      .color-picker {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        cursor: pointer;
       }
-      .mueble_tv{
-        background-color: var(--color-fondo-mueble-tv);
-      }
-      .bici{
-        background-color: var(--color-fondo-bici);
-      }
-      .sillon{
-        background-color: var(--color-fondo-sillon);
-      }
-      .tendedero{
-        background-color: var(--color-fondo-tendedero);
-      }
-      .parlantes{
-        background-color: var(--color-fondo-parlantes);
-      }
-      .estufa {
-        background-color: var(--color-fondo-estufa);
-      }
-      .circle-mesa {
+      .circle {
         width: 10px;
         height: 10px;
-        background-color: var(--color-fondo-mesa);
-        border-radius: 50%; 
-        display: inline-block; 
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
       }
-      .circle-mueble-tv {
-        width: 10px;
-        height: 10px;
-        background-color: var(--color-fondo-mueble-tv);
-        border-radius: 50%; 
-        display: inline-block; 
-      }
-      .circle-bici {
-        width: 10px;
-        height: 10px;
-        background-color: var(--color-fondo-bici);
-        border-radius: 50%; 
-        display: inline-block; 
-      }
-      .circle-sillon {
-        width: 10px;
-        height: 10px;
-        background-color: var(--color-fondo-sillon);
-        border-radius: 50%; 
-        display: inline-block; 
-      }
-      .circle-tendedero {
-        width: 10px;
-        height: 10px;
-        background-color: var(--color-fondo-tendedero);
-        border-radius: 50%; 
-        display: inline-block; 
-      }
-      .circle-parlantes {
-        width: 10px;
-        height: 10px;
-        background-color: var(--color-fondo-parlantes);
-        border-radius: 50%; 
-        display: inline-block; 
-      }
-      .circle-estufa {
-        width: 10px;
-        height: 10px;
-        background-color: var(--color-fondo-estufa);
-        border-radius: 50%; 
-        display: inline-block; 
+      .col-1-10.selected {
+        border: 3px solid black;
       }
     </style>
   </head>
@@ -104,203 +50,233 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-            <table class="table">
+            <table class="table text-center">
                 <tr>
                     <th>Espacio</th>
                     <th>Ancho</th>
                     <th>Largo</th>
                 </tr>
                 <tr>
-                    <td>Mesa <div class="circle-mesa"></div></td>
+                    <td>Mesa <div class="color-picker"
+                        style="background-color: var(--color-fondo-mesa);"
+                        onclick="setColor('burlywood')"></div></td>
                     <td>4</td>
                     <td>6</td>
                 </tr>
                 <tr>
-                    <td>Sillon <div class="circle-sillon"></div></td>
+                    <td>Sillon <div class="color-picker"
+                        style="background-color: var(--color-fondo-sillon);"
+                        onclick="setColor('blueviolet')"></div></td>
                     <td>3</td>
                     <td>6</td>
                 </tr>
                 <tr>
-                    <td>Mueble TV <div class="circle-mueble-tv"></div></td>
+                    <td>Mueble TV <div class="color-picker"
+                        style="background-color: var(--color-fondo-mueble-tv);"
+                        onclick="setColor('blue')"></div></td>
                     <td>1</td>
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td>Parlantes <div class="circle-parlantes"></div></td>
+                    <td>Parlantes <div class="color-picker"
+                        style="background-color: var(--color-fondo-parlantes);"
+                        onclick="setColor('chartreuse')"></div></td>
                     <td>1</td>
                     <td>2</td>
                 </tr>
                 <tr>
-                    <td>Bicicletas <div class="circle-bici"></div></td>
+                    <td>Bicicletas <div class="color-picker"
+                        style="background-color: var(--color-fondo-bici);"
+                        onclick="setColor('orange')"></div></td>
                     <td>2</td>
                     <td>5</td>
                 </tr>
                 <tr>
-                    <td>Estufa <div class="circle-estufa"></div></td>
+                    <td>Estufa <div class="color-picker"
+                        style="background-color: var(--color-fondo-estufa);"
+                        onclick="setColor('darkgreen')"></div></td>
                     <td>2</td>
                     <td>1</td>
                 </tr>
                 <tr>
-                    <td>Tendedero <div class="circle-tendedero"></div></td>
+                    <td>Tendedero <div class="color-picker"
+                        style="background-color: var(--color-fondo-tendedero);"
+                        onclick="setColor('aqua')"></div></td>
                     <td>2</td>
                     <td>3</td>
                 </tr>
                 
             </table>
+          
         </div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
       <div class="row">
-        <div class="col-1-10 py-2 px-2">1</div>
-        <div class="col-1-10 py-2 px-2">2</div>
-        <div class="col-1-10 py-2 px-2">3</div>
-        <div class="col-1-10 py-2 px-2">4</div>
-        <div class="col-1-10 py-2 px-2">5</div>
-        <div class="col-1-10 py-2 px-2">6</div>
-        <div class="col-1-10 py-2 px-2">7</div>
-        <div class="col-1-10 py-2 px-2">8</div>
-        <div class="col-1-10 py-2 px-2">9</div>
-        <div class="col-1-10 py-2 px-2">10</div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
+        <div class="col-1-10 py-1 px-1" onclick="paintSquare(this)"></div>
       </div>
     </div>
 
-
     <script>
-      let bici = document.getElementsByClassName('bici');
-      let mesa = document.getElementsByClassName('mesa');
-      let mueble_tv = document.getElementsByClassName('mueble_tv');
+      let selectedColor = null;
 
+      // Función para seleccionar un color
+      function setColor(color) {
+        selectedColor = color;
+        console.log('Color seleccionado:', selectedColor);
+      }
+
+      // Función para pintar un cuadro
+      function paintSquare(square) {
+        if (selectedColor) {
+
+          // Si el cuadro ya tiene background color, lo eliminamos
+          if (square.style.backgroundColor === selectedColor) {
+            square.style.backgroundColor = ''; 
+          } else {
+            square.style.backgroundColor = selectedColor;
+          }
+        }
+      }
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
